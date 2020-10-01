@@ -10,11 +10,14 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 
 import { TodoComponent } from './todo/todo.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { QuestionComponent } from './question/question.component';
+import { ResultComponent } from './result/result.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent,  TodoComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent,  TodoComponent, CategoriesComponent, QuestionComponent, ResultComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [

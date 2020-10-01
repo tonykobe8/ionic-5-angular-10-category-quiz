@@ -5,14 +5,19 @@ import { RegisterComponent } from './register/register.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { TodoComponent } from './todo/todo.component';
 
-
+import { CategoriesComponent } from './categories/categories.component';
+import { QuestionComponent } from './question/question.component';
+import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
  { path: '' , component:LoginComponent},
  { path: 'login' , component:LoginComponent},
  {path:'register' ,component:RegisterComponent},
- { path:'todo', component:TodoComponent }
+ { path:'todo', component:TodoComponent },
+ { path:'categories', component:CategoriesComponent },
+ { path:'question', component:QuestionComponent  },
+ { path:'result', component: ResultComponent }
 ];
 @NgModule({
   imports: [
