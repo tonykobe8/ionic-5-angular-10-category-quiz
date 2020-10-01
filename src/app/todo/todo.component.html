@@ -1,0 +1,29 @@
+<ion-list>
+  <h1 >Add todo list :</h1>
+ <ion-item text-wrap>
+<ion-label color="primary" stacked>Content :</ion-label>
+<ion-input type="text" [(ngModel)]="content" ></ion-input>
+ </ion-item>
+ <ion-item>
+ <ion-label color="primary" stacked>status :</ion-label>
+<ion-input type="text"  [(ngModel)]="status"></ion-input>
+ </ion-item>
+ <ion-item>
+ <ion-label color="primary" stacked>priority :</ion-label>
+   <ion-input type="text" [(ngModel)]="priority"></ion-input>
+ </ion-item>
+  <ion-item >
+<ion-icon name="add-circle-outline" color="success" (click)="addTask()"></ion-icon>
+<ion-label color="success">Add </ion-label>
+</ion-item>
+<h1>Todo list :</h1>
+<div *ngFor="let todo of todo_list ;let i = index">
+<ion-item>
+<p>{{todo.content}} </p>&nbsp;&nbsp;
+<p>{{todo.status}} </p>&nbsp;&nbsp;
+<p>{{todo.priority}} </p>&nbsp;&nbsp;
+<ion-icon name="pencil-outline" color="secondary" size="small"
+(click)="updateTask( todo,i)"></ion-icon> &nbsp;&nbsp;
+<ion-icon name="trash-outline" color="danger" (click)="delete(i)" size="small" ></ion-icon>
+</ion-item>
+</div> 
